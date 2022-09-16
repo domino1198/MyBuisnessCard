@@ -32,7 +32,7 @@ export const Skills = () => {
             <div className={'background-container'}>
             </div>
             <div className={'container-content'}>
-                <h2 className={'font text-white'}>Умения</h2>
+                <h2 className={'font text-white'}>Навыки</h2>
                 <div className={'container-card'}>
                     {card.map((item, index) => <Card key={index} cardProps={item}/>)}
                 </div>
