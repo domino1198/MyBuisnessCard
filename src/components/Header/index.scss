@@ -1,0 +1,120 @@
+@import '../../global.scss';
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.initials {
+  font-size: 42px;
+  color: $blue;
+  font-weight: 600;
+}
+
+.container-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: $md) {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    max-width: 100px;
+    margin-inline: auto;
+  }
+}
+
+.link-text {
+  font-weight: 500;
+  list-style: none;
+  font-size: 18px;
+  margin-inline: 5px;
+  transition: 0.3s color;
+
+  &:hover {
+    color: $blue !important;
+  }
+
+  @media screen and (max-width: $md) {
+    margin-block: 10px;
+  }
+
+}
+
+.radius {
+  border-radius: 50%;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: $blue solid 1px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: $blue;
+  }
+}
+
+.img {
+  transition: 0.3s;
+  fill: $blue;
+
+  &:hover {
+    fill: white;
+  }
+
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.line {
+  width: 25px;
+  border-top: 2px solid black;
+  margin-bottom: 5px;
+}
+
+.btn {
+  padding: 0;
+  width: 40px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.nav-mobile {
+  position: fixed;
+  background-color: white;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  height: 80%;
+}
+
+.link-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cross {
+  display: block;
+  width: 20px;
+  height: 20px;
+  --weight: 1px;
+  --aa: 1px;
+  --color: black;
+  border-radius: 3px;
+  background:
+          linear-gradient(45deg, transparent calc(50% - var(--weight) - var(--aa)), var(--color) calc(50% - var(--weight)), var(--color) calc(50% + var(--weight)), transparent calc(50% + var(--weight) + var(--aa))),
+          linear-gradient(-45deg, transparent calc(50% - var(--weight) - var(--aa)), var(--color) calc(50% - var(--weight)), var(--color) calc(50% + var(--weight)), transparent calc(50% + var(--weight) + var(--aa)));
+
+}
+

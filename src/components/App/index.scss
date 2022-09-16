@@ -1,0 +1,75 @@
+@import '../../global.scss';
+
+
+
+.my-node {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (max-width: $md) {
+    margin-inline: 25px;
+  }
+}
+
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: 1s linear opacity;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: 1s linear opacity;
+}
+
+.header {
+  margin: 0 auto;
+  width: 100%;
+  padding-block: 30px;
+  max-width: $width;
+
+}
+
+.link-absolute{
+  position: fixed;
+  z-index: 2;
+  bottom: 5%;
+  left:5%;
+  padding: 10px;
+  border-radius: 50%;
+  width: 41px;
+  border: 1px solid $blue;
+  height: 41px;
+  transition: 0.3s background-color;
+
+  &:hover{
+    background-color: $blue;
+  }
+
+}
+
+.section {
+  padding-top: 55px;
+  margin-inline: auto;
+  max-width: $width;
+  padding-bottom: 70px;
+}
+
+.absolute {
+  max-width: none!important;
+  width: 90%!important;
+  @media screen and (max-width: $md){
+    width: 100% !important;
+  }
+}
+
+.margin-end {
+  margin-bottom: 15%;
+}
+
+
