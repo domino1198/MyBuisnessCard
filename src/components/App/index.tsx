@@ -16,23 +16,25 @@ import {useIsSize} from "../../hooks/useIsSize";
 export const App = () => {
 
     const [show, setShow] = useState(false)
-    const [scroll, setScroll] = React.useState(0)
     const [load, setLoad] = useState(true)
     const [linear, setLinear] = useState(false)
     const [open, setOpen] = useState(false)
     const isSize = useIsSize()
 
     const handleScroll = () => {
-        setScroll(window.scrollY);
+        ((window.scrollY >= 120 && !['xs', 'sm', 'md'].find((item) => item === isSize)) ||
+            (window.scrollY >= 60 && ['xs', 'sm', 'md'].find((item) => item === isSize))) ? setShow(true) :
+            setShow(false)
     };
+
+
+    window.addEventListener('scroll', handleScroll)
 
     useEffect(() => {
         Loading().then(() => {
         })
-        window.addEventListener("scroll", handleScroll);
-        (scroll >= 120 && !['xs', 'sm', 'md'].find((item) => item === isSize)) || (scroll >= 60 && ['xs', 'sm', 'md'].find((item) => item === isSize)) ? setShow(true) : setShow(false)
         !load && setLinear(true)
-    }, [scroll, load, isSize])
+    }, [load])
 
     const Loading = async () => {
         await setTimeout(() => {

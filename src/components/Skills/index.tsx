@@ -11,7 +11,7 @@ export const Skills = () => {
             icon: <Front fill={'#3c65ff'} height={70} width={70}/>,
             name: "Frontend Developer",
             description: `Умею как верстать макеты, так и прописывать логику веб-приложения на React. Также есть опыт работы с SSR.
-            Опты работы 2 года`,
+            Опыт работы 2 года.`,
             stack: {name: 'Языки:', arr: ['JavaScript', "TypeScript"]},
             tools: ['React', 'Next.js', 'Redux', 'Axios', 'Redux ToolKit', 'redux-thunk']
         },
@@ -19,10 +19,10 @@ export const Skills = () => {
             icon: <Mobile fill={'#3c65ff'} height={70} width={70}/>,
             name: "Mobile Developer",
             description: `Разрабатываю кроссплатфорные мобильные приложения под ReactNative. 
-            Преимещественно работаю с Expo, но могу работаю и на чистом RN. Опыт работы чуть больше года`,
+            Преимещественно работаю с Expo, но могу работать и на чистом RN. Опыт работы 1 год и 4 месяца.`,
             stack: {name: 'Языки:', arr: ['JavaScript', "TypeScript"]},
             tools: ['ReactNative', 'Expo+ многие либы от этой команды как аудио-видео и тд.',
-                'Redux', 'Axios', 'Redux ToolKit', 'redux-thunk', "react navigation"]
+                'Redux', 'Axios', 'redux-thunk', "react navigation"]
         },
     ]
 
